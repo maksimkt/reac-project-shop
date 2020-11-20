@@ -1,0 +1,58 @@
+* {
+
+  font-size: 62,5%;
+  box-sizing: border-box;
+}
+
+body, #root {
+  margin: 0;
+  height: 100vh;
+}
+
+body, input, select,textarea {
+  font-size: 1.6rem;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+.app-conatiner {
+  display: grid;
+  grid-template-areas: "header"
+  "main"
+  "footer";
+  grid-template-rows:5rem 1fr 5rem;
+  grid-template-columns: 1fr;
+  height: 100%;
+}
+
+
+header {
+  grid-area: header;
+  background-color: black;
+  color: white;
+  display: flex;
+  align-items: center;
+  padding: 1.5rem;
+}
+
+header a {
+  text-decoration: none;
+  color: white;
+}
+
+header a:hover {
+  color: burlywood;
+}
+
+main {
+  grid-area: main;
+}
+
+footer {
+  grid-area: footer;
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

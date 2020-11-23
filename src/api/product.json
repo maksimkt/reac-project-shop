@@ -1,63 +1,63 @@
 {
 "products":[
     {"_id": 1, "title": "iPhone 12", "price": 899, "inventory": 20,
-      "img":"https://i.citrus.ua/imgcache/size_500/uploads/shop/a/d/adfd7fe609d7f3c8ada9d42d54548377.jpg",
-      "creator":"Aplle"
+      "img":"/imgs/iphone-12.webp",
+      "creator":"Apple All"
     },
     {"_id": 2, "title": "iPhone 12 mini", "price": 799, "inventory": 20,
       "img":"https://i.citrus.ua/imgcache/size_500/uploads/shop/8/e/8e90d4590a2e6092795cef266ecba090.jpg",
-      "creator":"Aplle"
+      "creator":"Apple"
     },
     {"_id": 3, "title": "iPhone 12 Pro", "price": 999, "inventory": 20,
       "img":"https://i.citrus.ua/imgcache/size_500/uploads/shop/f/3/f3544d524096a2da7effed0face0e849.jpg",
-      "creator":"Aplle"
+      "creator":"Apple All"
         },
     {"_id": 4, "title": "iPhone 12 Pro max", "price": 1099, "inventory": 20,
       "img":"https://i.citrus.ua/imgcache/size_500/uploads/shop/a/2/a2f8e55b4dc415ee765f4a8f43fec27c.jpg",
-      "creator":"Aplle"
+      "creator":"Apple All"
     },
     {"_id": 5, "title": "Samsung Galaxy Note 20", "price": 799, "inventory": 20,
       "img":"https://i.citrus.ua/imgcache/size_800/uploads/shop/f/0/f0779b018cfa3c32025923782b846e9e.jpg",
-      "creator":"Samsung"
+      "creator":"Samsung All"
     },
     {"_id": 6, "title": "Samsung Galaxy Note 20 Ultra", "price": 999, "inventory": 20,
       "img": "https://i.citrus.ua/imgcache/size_800/uploads/shop/7/d/7d42afbef57e5fff09ba15be24e8f06f.jpg",
-      "creator":"Samsung"
+      "creator":"Samsung All"
     },
     {"_id": 7, "title": "Samsung Galaxy S 20", "price": 800, "inventory": 20,
       "img":"https://i.citrus.ua/imgcache/size_800/uploads/shop/9/a/9a073c59bd3e4178fd46ef4df712fd52.jpg",
-      "creator":"Samsung"
+      "creator":"Samsung All"
     },
     {"_id": 8, "title": "Samsung Galaxy S 20 Ultra", "price": 900, "inventory": 20,
       "img":"https://i.citrus.ua/imgcache/size_800/uploads/shop/d/b/dbbe192ade5b9b538760fc9341887729.jpg",
-      "creator":"Samsung"
+      "creator":"Samsung All"
     },
     {"_id": 9, "title": "Google Pixel 5", "price": 799, "inventory": 20,
       "img":"https://i0.wp.com/itc.ua/wp-content/uploads/2020/09/gsmarena_002-11.jpg?fit=770%2C1027&quality=100&strip=all&ssl=1",
-      "creator":"Google"
+      "creator":"Google All"
     },
     {"_id": 10, "title": "Xiaomi Mi 10", "price": 499, "inventory": 20,
       "img":"https://i.citrus.ua/imgcache/size_800/uploads/shop/f/f/ff2706f1d52b76450d06456be46c4c41.jpg",
-      "creator":"Xiaomi"
+      "creator":"Xiaomi All"
     },
     {"_id": 11, "title": "Xiaomi Mi 10 pro", "price": 699, "inventory": 20,
-      "img":"","creator":"Xiaomi"
+      "img":"","creator":"Xiaomi All"
     },
     {"_id": 12, "title": "Xiaomi Mi 10T", "price": 399, "inventory": 20,
       "img":"https://i.citrus.ua/imgcache/size_800/uploads/shop/a/5/a5c04e01d90936b8366a014c0e7ce646.jpg",
-      "creator":"Xiaomi"
+      "creator":"Xiaomi All"
     },
     {"_id": 13, "title": "Xiaomi Mi 10T Pro", "price": 599, "inventory": 20,
       "img":"https://i.citrus.ua/imgcache/size_800/uploads/shop/3/e/3efa18c866b1cda848f6977eaea5ee2a.jpg",
-      "creator":"Xiaomi"
+      "creator":"Xiaomi All"
     },
     {"_id": 14, "title": "One Plus 8", "price": 799, "inventory": 20,
       "img":"https://i.citrus.ua/imgcache/size_800/uploads/shop/7/e/7e8355b933353d6638b6887383eb11ad.jpg ",
-      "creator":"One Plus"
+      "creator":"One Plus All"
     },
     {"_id": 15, "title": "One Plus 8T", "price": 999, "inventory": 20,
       "img":"https://i.citrus.ua/imgcache/size_800/uploads/shop/e/1/e185b750e47d5dc47474c07572e236fb.jpg",
-      "creator":"One Plus"
+      "creator":"One Plus All"
     } 
   ]
 }  

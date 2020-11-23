@@ -5,6 +5,7 @@ export class Filter extends Component {
     render() {
         return (
             <div className ="filter">
+                <input type="text"  placeholder="search"></input>
                 <div className="filter-result">{this.props.count} Products</div>
                 <div className = "filter-sort">Order
                     <select value={this.props.sort} onChange={this.props.sortProducts}>
@@ -15,8 +16,8 @@ export class Filter extends Component {
                 </div>
                 <div className = "filter-produser">Produser
                 <select value={this.props.produser} onChange={this.props.filterProducts}>
-                    <option value="all" >All</option>
-                    <option value="Aplle">Aplle</option>
+                    <option value="All" >All</option>
+                    <option value="Apple">Apple</option>
                     <option value="Samsung">Samsung</option>
                     <option value="Xiaomi">Xiaomi</option>
                     <option value="Google">Google</option>

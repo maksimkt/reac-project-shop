@@ -1,6 +1,6 @@
 import React from "react"
 import Products from "./components/Poducts"
-import data from "./api/product.json"
+import data from "./product.json"
 import { Filter } from "./components/Filter";
 import Cart from "./components/Cart";
 

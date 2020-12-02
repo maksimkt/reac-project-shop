@@ -82,7 +82,7 @@ footer {
 }
 .products li {
   flex: 0 1 24rem;
-  height: 47rem;
+  height: 35rem;
   padding: 1rem;
 }
 .product {
@@ -92,8 +92,8 @@ footer {
   height: 100%;
 }
 .product img {
-  max-width: 37rem;
-  max-height: 37rem;
+  max-width: 23rem;
+  max-height: 23rem;
 } 
 .product-price {
   display: flex;
@@ -150,7 +150,8 @@ footer {
   list-style-type: none;
 }
 .cart-items img {
-  width: 5rem;
+  width: 4rem;
+  height: 5rem;
 }
 .cart-items li {
   display: flex;

@@ -5,7 +5,7 @@ import Zoom from "react-reveal/Zoom";
 import formatCurrency from "../util";
 import { connect } from "react-redux";
 import { fetchProducts } from "../actions/productActions";
-
+import {addToCart} from "../actions/cartActions"
 class Products extends Component {
   constructor(props) {
     super(props);
@@ -39,7 +39,7 @@ class Products extends Component {
                       href={"#" + product._id}
                       onClick={() => this.openModal(product)}
                     >
-                      {/* <img src={product.image} alt={product.title}></img> */}
+                      <img src={product.img} alt={product._id}></img>
                       <p>{product.title}</p>
                     </a>
                     <div className="product-price">
@@ -64,7 +64,7 @@ class Products extends Component {
                 X
               </button>
               <div className="product-details">
-                <img srs={product.img} alt={product.title}></img>
+                <img src={product.img} alt={product._id}></img>
                 <div className="product-details-description">
                   <p>
                     <strong>{product.title}</strong>
@@ -103,4 +103,5 @@ class Products extends Component {
 
 export default connect((state) => ({ products: state.products.filteredItems}), {
   fetchProducts,
+  addToCart
 })(Products);

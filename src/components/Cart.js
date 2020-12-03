@@ -5,9 +5,8 @@ import { connect } from "react-redux";
 import { removeFromCart } from "../actions/cartActions";
 import { cleearOrder } from "../actions/orderActions";
 import { createOrder } from "../actions/orderActions";
-import Modal from 'react-modal';
-import Zoom from 'react-reveal/Zoom'
-
+import Modal from "react-modal";
+import Zoom from "react-reveal/Zoom";
 
 class Cart extends Component {
   constructor(props) {
@@ -33,15 +32,17 @@ class Cart extends Component {
       email: this.state.email,
       address: this.state.address,
       cartItems: this.props.cartItems,
-      // phoneNumber: this.props.phoneNumber,
-      total: this.props.cartItems.reduce((a,c)=> a + c.price*c.count, 0),
+      phoneNumber: this.state.phoneNumber,
+      total: this.props.cartItems.reduce((a, c) => a + c.price * c.count, 0),
     };
     this.props.createOrder(order);
+    
   };
-  closeModal = () =>{
+  closeModal = () => {
     this.props.cleearOrder();
-  }
+  };
   render() {
+    
     const { cartItems, order } = this.props;
     return (
       <div>
@@ -53,12 +54,12 @@ class Cart extends Component {
           </div>
         )}
 
-        {
-          order && <Modal 
-          isOpen={true}
-          onRequestClose={this.closeModal}>
+        {order && (
+          <Modal isOpen={true} onRequestClose={this.closeModal}>
             <Zoom>
-              <botton className="close-modal" onClick={this.closeModal}>x</botton>
+              <botton className="close-modal" onClick={this.closeModal}>
+                x
+              </botton>
               <div className="order-details">
                 <h3 className="success-message">Your order has placed.</h3>
                 <h2>Order: {order._id}</h2>
@@ -71,10 +72,6 @@ class Cart extends Component {
                     <div>Last Name:</div>
                     <div>{order.lastName}</div>
                   </li>
-                  {/* <li>
-                    <div>Phone:</div>
-                    <div>{order.phoneNumber}</div>
-                  </li> */}
                   <li>
                     <div>Email:</div>
                     <div>{order.email}</div>
@@ -84,23 +81,29 @@ class Cart extends Component {
                     <div>{order.address}</div>
                   </li>
                   <li>
+                    <div>Phone:</div>
+                    <div>{order.phoneNumber}</div>
+                  </li>
+                  <li>
                     <div>Total:</div>
                     <div>{formatCurrency(order.total)}</div>
                   </li>
                   <li>
                     <div>Cart Items:</div>
-                    <div>{order.cartItems.map((i) => (
-                      <div>
-                        {" "}
-                        {i.count} {" x "} {i.title}
-                      </div>
-                    ))}</div>
+                    <div>
+                      {order.cartItems.map((i) => (
+                        <div>
+                          {" "}
+                          {i.count} {" x "} {i.title}
+                        </div>
+                      ))}
+                    </div>
                   </li>
                 </ul>
               </div>
             </Zoom>
           </Modal>
-        }
+        )}
         <div>
           <div className="cart">
             <Fade left cascade>
@@ -188,13 +191,17 @@ class Cart extends Component {
                           ></input>
                         </li>
                         <li>
-                          {/* <label>Phone Number</label>
+                          <label>Phone Number</label>
                           <input
                             name="phoneNumber"
-                            type="number"
+                            type="tel"
+                            minlength="10"
+                            maxLength="13"
+                            pattern="^[0-9-+\s()]*$"
                             required
+                            placeholder="+380XXXXXXX"
                             onChange={this.handleInput}
-                          ></input> */}
+                          ></input>
                         </li>
                         <li>
                           <button type="submit" className="button primary">

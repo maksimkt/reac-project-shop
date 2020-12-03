@@ -6,6 +6,9 @@ const shortid = require("shortid");
 const app = express();
 app.use(bodyParser.json());
 
+app.use("/", express.static(__dirname + "/build"));
+app.get("/", (req, res) => res.sendFile(__dirname + "/build/index.html"));
+
 mongoose.connect("mongodb://localhost/react-project-shop-db", {
   useNewUrlParser: true,
   useCreateIndex: true,
@@ -86,14 +89,14 @@ app.post("/api/orders", async (req, res) => {
   res.send(order);
 });
 
-// app.get("/api/orders", async (req, res) => {
-//   const orders = await Order.find({});
-//   res.send(orders);
-// });
-// app.delete("/api/orders/:id", async (req, res) => {
-//   const order = await Order.findByIdAndDelete(req.params.id);
-//   res.send(order);
-// });
+app.get("/api/orders", async (req, res) => {
+  const orders = await Order.find({});
+  res.send(orders);
+});
+app.delete("/api/orders/:id", async (req, res) => {
+  const order = await Order.findByIdAndDelete(req.params.id);
+  res.send(order);
+});
 
 const port = process.env.PORT || 5000;
 app.listen(port, () => console.log("serve at http://localhost:5000"));

@@ -1,47 +1,52 @@
 * {
-
-  font-size: 62,5%;
   box-sizing: border-box;
 }
 
-body, #root {
+body,
+#root {
   margin: 0;
   height: 100vh;
 }
 
-body, input, select,textarea {
+body,
+input,
+select,
+textarea {
   font-size: 1.6rem;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-
 .app-conatiner {
   display: grid;
-  grid-template-areas: "header"
-  "main"
-  "footer";
-  grid-template-rows:5rem 1fr 5rem;
+  grid-template-areas:
+    "header"
+    "main"
+    "footer";
+  grid-template-rows: 3rem 1fr 3rem;
   grid-template-columns: 1fr;
   height: 100%;
 }
 
-
 header {
+  width: 100%;
   grid-area: header;
   background-color: black;
   color: white;
   display: flex;
   align-items: center;
   padding: 1.5rem;
+  position: fixed;
+  z-index: 2;
 }
 
 header a {
   text-decoration: none;
   color: white;
+  margin-right: 1.5rem;
 }
 
 header a:hover {
-  color: burlywood;
+  color: rgb(179, 139, 100);
 }
 
 main {
@@ -63,11 +68,11 @@ footer {
 }
 
 .main {
-  flex: 3 60rem
+  flex: 4 60rem;
 }
 
 .sidebar {
-  flex: 1 20rem
+  flex: 1 20rem;
 }
 
 /*prod*/
@@ -81,34 +86,36 @@ footer {
   list-style-type: none;
 }
 .products li {
-  flex: 0 1 24rem;
-  height: 35rem;
+  flex: 0 1 40rem;
+  height: 15rem;
   padding: 1rem;
 }
 .product {
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 100%;
+  
+  border: solid 1px black;
+  border-radius: 1rem;
 }
 .product img {
-  max-width: 23rem;
-  max-height: 23rem;
-} 
+  max-width: 13rem;
+  max-height: 13rem;
+}
 .product-price {
+  font-size: 1rem;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  flex-direction: column;
 }
 .product-price div,
 .product-price button {
   text-align: center;
-  flex: 1;
+  
 }
 .product-price div {
-  font-size: 2rem;
+  font-size: 1rem;
 }
 .button {
+  width: 2rem;
+  height: 1rem;
   padding: 1rem;
   border: 0.1rem #c0c0c0 solid;
   background-color: #f0f0f0;
@@ -118,10 +125,15 @@ footer {
   border: 0.1rem #808080 solid;
 }
 .button.primary {
-  background-color:black ;
+  background-color: black;
   color: white;
+  /* margin-bottom: 4rem; */
+  width: 10rem;
 }
-
+.product-botton-container {
+  height: 4rem;
+  margin-top: 10rem;
+}
 /* Filter */
 .filter {
   display: flex;

@@ -1,7 +1,6 @@
 import {
   FETCH_PRODUCTS,
   FILTER_PRODUCTS_BY_CREATOR,
-  SEARCH_PRODUCT,
   FILTER_PRODUCTS_BY_PRICE,
 } from "../const/const";
 

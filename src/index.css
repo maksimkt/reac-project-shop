@@ -99,7 +99,7 @@ main {
   max-height: 270px;
   width: 400px;
   /* display: flex;
-  justify-content: space-between; */
+  justify-cxontent: space-between; */
   display: flex;
   flex-direction: column;
   align-items: center;

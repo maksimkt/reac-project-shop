@@ -1,4 +1,4 @@
-const { CLEAR_ORDER, CREATE_ORDER, FETCH_ORDERS } = require("../const/const");
+import { CLEAR_ORDER, CREATE_ORDER, FETCH_ORDERS }from "../const/const";
 
 const orderReducer = (state = {}, action) => {
   switch (action.type) {

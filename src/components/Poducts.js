@@ -41,20 +41,19 @@ class Products extends Component {
                       href={"#" + product._id}
                       onClick={() => this.openModal(product)}
                     >
-                      <img src={product.img} alt={product._id}></img>
+                      <img
+                        className="product-img"
+                        src={product.img}
+                        alt={product._id}
+                      ></img>
+                      <p className="title-p">
+                        {product.title}
+                        {":"}
+                      </p>
                     </a>
 
                     <div className="product-price">
-                      <a
-                        href={"#" + product._id}
-                        onClick={() => this.openModal(product)}
-                      >
-                        <p>
-                          {product.title}
-                          {":"}
-                        </p>
-                      </a>
-                      <div>{formatCurrency(product.price)}</div>
+                      <p>{formatCurrency(product.price)}</p>
                       <button
                         onClick={() => this.props.addToCart(product)}
                         className="button primary"
@@ -70,7 +69,9 @@ class Products extends Component {
         </Fade>
 
         {product && (
-          <Modal isOpen={true} onRequestClose={this.closeModal}>
+          <Modal isOpen={true} onRequestClose={this.closeModal}
+        
+          >
             <Zoom>
               <button className="close-modal" onClick={this.closeModal}>
                 X
@@ -82,19 +83,13 @@ class Products extends Component {
                     <strong>{product.title}</strong>
                   </p>
                   <p>{product.description}</p>
-                  <p>
-                    Colors:{" "}
-                    {product.color.map((i) => (
-                      <span>
-                        {" "}
-                        <button className="button">{i}</button>
-                      </span>
-                    ))}
-                  </p>
+                 
                   <div className="product-price">
                     <div>{formatCurrency(product.price)}</div>
-                    <botton
-                      className="button primary"
+                   
+                  </div>
+                  <botton
+                      className=" primary"
                       onClick={() => {
                         this.props.addToCart(product);
                         this.closeModal();
@@ -102,7 +97,6 @@ class Products extends Component {
                     >
                       Add to Cart{" "}
                     </botton>
-                  </div>
                 </div>
               </div>
             </Zoom>

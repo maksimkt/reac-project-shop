@@ -11,7 +11,7 @@ class Filter extends Component {
         <div className="filter-result">
           {this.props.filteredProducts.length} Products
         </div>
-        <div className="filter-sort">
+        <div className="filter-sor big custom-dropdown">
           Order{" "}
           <select
             value={this.props.sort}
@@ -24,7 +24,7 @@ class Filter extends Component {
             <option value="highest">Highest</option>
           </select>
         </div>
-        <div className="filter-produser">
+        <div className="filter-produser big custom-dropdown">
           Produser
           <select
             value={this.props.creator}

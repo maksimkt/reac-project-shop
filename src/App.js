@@ -15,17 +15,20 @@ const App = (props) => {
         <BrowserRouter>
           <div className="app-conatiner">
             <header>
-              <Link to = "/">Project shop   </Link>
+              <Link to = "/" >Project shop   </Link>
               <Link to = "/admin">Orders    </Link>
               <Link to = "/Cart">Cart    </Link>
             </header>
+            
             <main>
+
               <Route path="/admin" component={OrdersPage}/>
               <Route path="/" component={HomePage} exact/>
               <Route path="/Cart" component={CartPage} exact/>
              
             </main>
-            <footer>test</footer>
+            <footer>Contact me : <a href="https://mail.google.com/mail/u/0/">  makskosar79@gmail.com</a>
+            </footer>
           </div>
         </BrowserRouter>
       </Provider>
